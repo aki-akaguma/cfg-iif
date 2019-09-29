@@ -103,10 +103,12 @@ mod tests {
         {
             a = "abc";
         };
-        cfg_iif!(#[cfg(feature = "has_abc")]
-        {
-            a_iif = "abc";
-        });
+        cfg_iif!(
+            #[cfg(feature = "has_abc")]
+            {
+                a_iif = "abc";
+            }
+        );
         assert_eq!(a_iif, a);
         //
         let mut a = "";
@@ -115,10 +117,12 @@ mod tests {
         {
             a = "abc";
         };
-        cfg_iif!(#[cfg(feature = "has_abc")]
-        {
-            a_iif = "abc";
-        });
+        cfg_iif!(
+            #[cfg(feature = "has_abc")]
+            {
+                a_iif = "abc";
+            }
+        );
         assert_eq!(a_iif, a);
     }
     #[test]
