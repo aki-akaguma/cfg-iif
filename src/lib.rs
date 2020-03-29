@@ -26,9 +26,10 @@ macro_rules! cfg_iif {
         }
     }};
     //
+    /* deprecated from rustc 1.42.0
     ($($cfg_meta:meta),* {
         $($true_it:tt)*
-    } else {
+    } r#else {
         $($false_it:tt)*
     }) => {{
         #[cfg($($cfg_meta),*)]
@@ -49,6 +50,7 @@ macro_rules! cfg_iif {
             $($it)*
         }
     }};
+    */
 }
 
 #[cfg(test)]
@@ -125,6 +127,7 @@ mod tests {
         );
         assert_eq!(a_iif, a);
     }
+    /*
     #[test]
     fn it_works_02() {
         let a = {
@@ -188,4 +191,5 @@ mod tests {
         });
         assert_eq!(a_iif, a);
     }
+    */
 }
