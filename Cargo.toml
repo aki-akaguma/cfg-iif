@@ -1,6 +1,7 @@
 [package]
 name = "cfg-iif"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["hcc"]
+edition = "2018"
 
 [dependencies]
