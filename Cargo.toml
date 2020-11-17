@@ -1,7 +1,14 @@
 [package]
 name = "cfg-iif"
-version = "0.1.1"
-authors = ["hcc"]
+version = "0.1.2"
+authors = ["Hidetoshi <hchacha@users.sourceforge.net>"]
+description = """
+cfg-iif is simple macro
+"""
+keywords = ["cfg", "macro"]
+categories = ["devel-utils"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
 edition = "2018"
 
 [dependencies]
