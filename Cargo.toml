@@ -1,14 +1,15 @@
 [package]
 name = "cfg-iif"
-version = "0.1.3"
-authors = ["Hidetoshi <hchacha@users.sourceforge.net>"]
+version = "0.1.4"
+authors = ["aki <aki.akaguma@hotmail.com>"]
 description = """
-cfg-iif is simple macro
+A macro for defining `#[cfg]` `if-else` functions.
 """
 keywords = ["cfg", "macro"]
 categories = ["devel-utils"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 edition = "2018"
+repository = "https://github.com/aki-akaguma/cfg-iif"
 
 [dependencies]
