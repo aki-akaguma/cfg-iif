@@ -1,6 +1,6 @@
 [package]
 name = "cfg-iif"
-version = "0.1.4"
+version = "0.2.0"
 authors = ["aki <aki.akaguma@hotmail.com>"]
 description = """
 A macro for defining `#[cfg]` `if-else` functions.

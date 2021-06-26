@@ -52,6 +52,10 @@ cfg_iif!(feature = "has_abc" {
 ```
 
 
+# Changelogs
+
+[This crate's changelog here.](https://github.com/aki-akaguma/cfg-iif/blob/main/CHANGELOG.md)
+
 # License
 
 This project is licensed under either of

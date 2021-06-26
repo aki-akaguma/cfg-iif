@@ -2,6 +2,11 @@ TBD
 ===
 Unreleased changes. Release notes have not yet been written.
 
+0.2.0 (2021-06-26)
+=====
+
+* first commit on github
+
 0.1.4 (2021-06-26)
 =====
 
