@@ -1,6 +1,6 @@
 [package]
 name = "cfg-iif"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Hidetoshi <hchacha@users.sourceforge.net>"]
 description = """
 cfg-iif is simple macro

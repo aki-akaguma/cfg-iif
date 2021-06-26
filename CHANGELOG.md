@@ -2,9 +2,13 @@ TBD
 ===
 Unreleased changes. Release notes have not yet been written.
 
+0.1.3 (2021-06-26)
+=====
+
+* add some documents, README.tpl and Makefile
+
 0.1.2 (2020-11-18)
 =====
-Feature:
 
 * add README.md, COPYING, LICENSE-APACHE, LICENSE-MIT
 
