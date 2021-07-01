@@ -1,12 +1,12 @@
 [package]
 name = "cfg-iif"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["aki <aki.akaguma@hotmail.com>"]
 description = """
 A macro for defining `#[cfg]` `if-else` functions.
 """
 keywords = ["cfg", "macro"]
-categories = ["devel-utils"]
+#categories = ["devel-utils"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 edition = "2018"

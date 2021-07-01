@@ -2,6 +2,11 @@ TBD
 ===
 Unreleased changes. Release notes have not yet been written.
 
+0.2.1 (2021-07-01)
+=====
+
+* fix lisence
+
 0.2.0 (2021-06-26)
 =====
 
