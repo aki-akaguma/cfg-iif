@@ -6,3 +6,7 @@ README.md: src/lib.rs
 
 test:
 	cargo test
+
+clean:
+	@cargo clean
+	@rm -f z.*

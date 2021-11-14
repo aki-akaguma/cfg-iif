@@ -2,6 +2,11 @@ TBD
 ===
 Unreleased changes. Release notes have not yet been written.
 
+0.2.2 (2021-11-14)
+=====
+
+* add more documents
+
 0.2.1 (2021-07-01)
 =====
 

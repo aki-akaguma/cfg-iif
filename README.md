@@ -6,6 +6,10 @@ The macro provided by this crate.
 Unlike [`cfg_if`](https://crates.io/crates/cfg-if),
 `cfg_iif` can be used as a function, and can be used in a function.
 
+## Features
+
+- minimum support rustc 1.31.1 (b6c32da9b 2018-12-18)
+
 ## Example
 
 ### Example 1: `#[cfg()]`
@@ -50,7 +54,6 @@ cfg_iif!(feature = "has_abc" {
     a_iif = "abc";
 });
 ```
-
 
 # Changelogs
 
