@@ -8,7 +8,7 @@ Unlike [`cfg_if`](https://crates.io/crates/cfg-if),
 
 ## Features
 
-- minimum support rustc 1.31.1 (b6c32da9b 2018-12-18)
+- minimum support rustc 1.56.1 (59eed8a2a 2021-11-01)
 
 ## Example
 
