@@ -2,7 +2,10 @@ TBD: cfg-iif
 ===
 Unreleased changes. Release notes have not yet been written.
 
-changes to edition 2021
+0.2.3 (2022-06-13)
+=====
+
+* changes to edition 2021
 
 0.2.2 (2021-11-14)
 =====
