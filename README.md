@@ -1,5 +1,10 @@
 # cfg-iif
 
+[![crate][crate-image]][crate-link]
+[![Docs][docs-image]][docs-link]
+![Rust Version][rustc-image]
+![Apache2/MIT licensed][license-image]
+
 A macro for defining `#[cfg]` `if-else` functions.
 
 The macro provided by this crate.
@@ -55,6 +60,8 @@ cfg_iif!(feature = "has_abc" {
 });
 ```
 
+[Documentation][docs-link]
+
 # Changelogs
 
 [This crate's changelog here.](https://github.com/aki-akaguma/cfg-iif/blob/main/CHANGELOG.md)
@@ -69,3 +76,12 @@ This project is licensed under either of
    https://opensource.org/licenses/MIT)
 
 at your option.
+
+[//]: # (badges)
+
+[crate-image]: https://img.shields.io/crates/v/cfg-iif.svg
+[crate-link]: https://crates.io/crates/cfg-iif
+[docs-image]: https://docs.rs/cfg-iif/badge.svg
+[docs-link]: https://docs.rs/cfg-iif/
+[rustc-image]: https://img.shields.io/badge/rustc-1.56+-blue.svg
+[license-image]: https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg
