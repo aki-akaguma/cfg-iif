@@ -14,3 +14,8 @@ rust-version = "1.56.0"
 repository = "https://github.com/aki-akaguma/cfg-iif"
 
 [dependencies]
+
+[features]
+
+# for tests
+has_abc = []

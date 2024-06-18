@@ -6,29 +6,29 @@ use cfg_iif::cfg_iif;
 #[test]
 fn it_works_01() {
     let a = {
-        #[cfg(Unix)]
+        #[cfg(target_family = "unix")]
         {
             "unix"
         }
-        #[cfg(not(Unix))]
+        #[cfg(not(target_family = "unix"))]
         {
             "not unix"
         }
     };
-    let a_iif = cfg_iif!(#[cfg(Unix)] { "unix" } else { "not unix" });
+    let a_iif = cfg_iif!(#[cfg(target_family = "unix")] { "unix" } else { "not unix" });
     assert_eq!(a_iif, a);
     //
     let a = {
-        #[cfg(Windows)]
+        #[cfg(target_family = "windows")]
         {
             "windows"
         }
-        #[cfg(not(Windows))]
+        #[cfg(not(target_family = "windows"))]
         {
             "not windows"
         }
     };
-    let a_iif = cfg_iif!(#[cfg(Unix)] { "windows" } else { "not windows" });
+    let a_iif = cfg_iif!(#[cfg(target_family = "windows")] { "windows" } else { "not windows" });
     assert_eq!(a_iif, a);
     //
     let a = {
