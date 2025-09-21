@@ -16,7 +16,7 @@ Unlike [`cfg_if`](https://crates.io/crates/cfg-if),
 
 ## Features
 
-- minimum support rustc 1.56.1 (59eed8a2a 2021-11-01)
+- minimum support rustc 1.60.0 (7737e0b5c 2022-04-04)
 
 ## Example
 
@@ -25,7 +25,7 @@ Unlike [`cfg_if`](https://crates.io/crates/cfg-if),
 - `a_iif` is "unix" when a os is Unix at compile time:
 ```rust
 use cfg_iif::cfg_iif;
-let a_iif = cfg_iif!(#[cfg(Unix)] { "unix" } else { "not unix" });
+let a_iif = cfg_iif!(#[cfg(target_family = "unix")] { "unix" } else { "not unix" });
 ```
 
 - `a_iif` is "abc" when a feature is "has_abc" at compile time:
@@ -86,7 +86,7 @@ at your option.
 [crate-link]: https://crates.io/crates/cfg-iif
 [docs-image]: https://docs.rs/cfg-iif/badge.svg
 [docs-link]: https://docs.rs/cfg-iif/
-[rustc-image]: https://img.shields.io/badge/rustc-1.56+-blue.svg
+[rustc-image]: https://img.shields.io/badge/rustc-1.60+-blue.svg
 [license-image]: https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg
 [test-ubuntu-image]: https://github.com/aki-akaguma/cfg-iif/actions/workflows/test-ubuntu.yml/badge.svg
 [test-ubuntu-link]: https://github.com/aki-akaguma/cfg-iif/actions/workflows/test-ubuntu.yml

@@ -7,7 +7,7 @@ Unlike [`cfg_if`](https://crates.io/crates/cfg-if),
 
 # Features
 
-- minimum support rustc 1.56.1 (59eed8a2a 2021-11-01)
+- minimum support rustc 1.60.0 (7737e0b5c 2022-04-04)
 
 # Example
 
@@ -142,7 +142,8 @@ mod tests {
                 "not windows"
             }
         };
-        let a_iif = cfg_iif!(#[cfg(target_family = "windows")] { "windows" } else { "not windows" });
+        let a_iif =
+            cfg_iif!(#[cfg(target_family = "windows")] { "windows" } else { "not windows" });
         assert_eq!(a_iif, a);
         //
         let a = {

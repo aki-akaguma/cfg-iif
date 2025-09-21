@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * `specs`
 * more tests
 
+### Changed
+* rust-version = "1.60.0"
+
 ## [0.2.7] (2024-06-19)
 ### Changed
 * rewrited: `cfg(Unix)` to `cfg(target_family = "unix")`
