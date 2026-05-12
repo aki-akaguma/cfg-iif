@@ -69,7 +69,19 @@ let result = cfg_iif!(
 /// This macro provided by this crate. See crate documentation for more information.
 #[macro_export]
 macro_rules! cfg_iif {
-    // --- Internal arms ---
+    // --- Internal arms: Normalization (Standard -> Shorthand) ---
+
+    // Initial if (Standard) -> Convert and re-invoke
+    (@inner () #[cfg($($m:meta),*)] { $($it:tt)* } $($rest:tt)* ) => {
+        $crate::cfg_iif! { @inner () $($m),* { $($it)* } $($rest)* }
+    };
+
+    // Else if (Standard) -> Convert and re-invoke
+    (@inner ( $($prev:meta),+ ) else if #[cfg($($m:meta),*)] { $($it:tt)* } $($rest:tt)* ) => {
+        $crate::cfg_iif! { @inner ( $($prev),+ ) else if $($m),* { $($it)* } $($rest)* }
+    };
+
+    // --- Internal arms: Main Logic (Consolidated Shorthand) ---
 
     // Final else
     (@inner ( $($prev:meta),+ ) else { $($it:tt)* }) => {
@@ -77,32 +89,14 @@ macro_rules! cfg_iif {
         { $($it)* }
     };
 
-    // --- Standard Syntax ---
-
     // Else if
-    (@inner ( $($prev:meta),+ ) else if #[cfg($($m:meta),*)] { $($it:tt)* } $($rest:tt)* ) => {
-        #[cfg(all(not(any($($prev),*)), $($m),*))]
-        { $($it)* }
-        $crate::cfg_iif! { @inner ( $($prev,)* all($($m),*) ) $($rest)* }
-    };
-
-    // Initial if
-    (@inner () #[cfg($($m:meta),*)] { $($it:tt)* } $($rest:tt)* ) => {
-        #[cfg(all($($m),*))]
-        { $($it)* }
-        $crate::cfg_iif! { @inner (all($($m),*)) $($rest)* }
-    };
-
-    // --- Shorthand Syntax ---
-
-    // Else if (Shorthand)
     (@inner ( $($prev:meta),+ ) else if $($m:meta),+ { $($it:tt)* } $($rest:tt)* ) => {
         #[cfg(all(not(any($($prev),*)), $($m),*))]
         { $($it)* }
         $crate::cfg_iif! { @inner ( $($prev,)* all($($m),*) ) $($rest)* }
     };
 
-    // Initial if (Shorthand)
+    // Initial if
     (@inner () $($m:meta),+ { $($it:tt)* } $($rest:tt)* ) => {
         #[cfg(all($($m),*))]
         { $($it)* }

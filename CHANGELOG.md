@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Support for multiple `cfg` predicates in `cfg_iif!` macro (implicitly combined with `all()`).
 * More examples and tests for the new features.
 
+### Changed
+* Refactored `cfg_iif!` macro internals to use a normalized recursive structure, reducing code duplication and improving maintainability.
+
 ### Fixed
 * Bug where multiple `cfg` predicates caused a compilation error in `else` branches.
 
