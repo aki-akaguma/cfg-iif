@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+
+## [0.2.9] (2026-05-12)
 ### Added
 * Support for `else if` chains in `cfg_iif!` macro.
 * Support for multiple `cfg` predicates in `cfg_iif!` macro (implicitly combined with `all()`).
@@ -17,7 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 * Bug where multiple `cfg` predicates caused a compilation error in `else` branches.
-
 
 ## [0.2.8] (2025-09-24)
 ### Added
@@ -108,7 +110,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] (2018-06-13)
 * first commit
 
-[unreleased]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.8..HEAD
+[unreleased]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.9..HEAD
+[0.2.9]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.8..v0.2.9
 [0.2.8]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.7..v0.2.8
 [0.2.7]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.6..v0.2.7
 [0.2.6]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.5..v0.2.6
