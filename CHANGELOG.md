@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Support for `else if` chains in `cfg_iif!` macro.
 * Support for multiple `cfg` predicates in `cfg_iif!` macro (implicitly combined with `all()`).
 * More examples and tests for the new features.
+* Verified `no_std` compatibility by building for bare-metal targets (`thumbv7m-none-eabi`).
 
 ### Changed
 * Refactored `cfg_iif!` macro internals to use a normalized recursive structure, reducing code duplication and improving maintainability.

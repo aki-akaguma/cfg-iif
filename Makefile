@@ -19,6 +19,10 @@ clean:
 	@cargo clean
 	@rm -f z.*
 
+check:
+	cargo check
+	cargo check --target thumbv7m-none-eabi
+
 clippy:
 	cargo clippy --offline --tests --workspace
 
