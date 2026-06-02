@@ -2,113 +2,111 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-
-## [0.2.9] (2026-05-12)
+## [0.2.9] - 2026-05-12
 ### Added
-* Support for `else if` chains in `cfg_iif!` macro.
-* Support for multiple `cfg` predicates in `cfg_iif!` macro (implicitly combined with `all()`).
-* More examples and tests for the new features.
-* Verified `no_std` compatibility by building for bare-metal targets (`thumbv7m-none-eabi`).
+- Support for `else if` chains in `cfg_iif!` macro.
+- Support for multiple `cfg` predicates in `cfg_iif!` macro (implicitly combined with `all()`).
+- More examples and tests for new features.
+- Verification of `no_std` compatibility by building for bare-metal targets (`thumbv7m-none-eabi`).
 
 ### Changed
-* Refactored `cfg_iif!` macro internals to use a normalized recursive structure, reducing code duplication and improving maintainability.
+- Refactor `cfg_iif!` macro internals to use a normalized recursive structure, reducing code duplication and improving maintainability.
 
 ### Fixed
-* Bug where multiple `cfg` predicates caused a compilation error in `else` branches.
+- Bug where multiple `cfg` predicates caused a compilation error in `else` branches.
 
-## [0.2.8] (2025-09-24)
+## [0.2.8] - 2025-09-24
 ### Added
-* `specs`
-* more tests
+- Specifications in `specs` directory.
+- More tests.
 
 ### Changed
-* rust-version = "1.60.0"
+- Update `rust-version` to `1.60.0`.
 
-## [0.2.7] (2024-06-19)
+## [0.2.7] - 2024-06-19
 ### Changed
-* rewrited: `cfg(Unix)` to `cfg(target_family = "unix")`
+- Rewrite `cfg(Unix)` to `cfg(target_family = "unix")`.
 
 ### Fixed
-* clippy: unexpected_cfgs
+- Clippy warning: `unexpected_cfgs`.
 
-## [0.2.6] (2023-02-12)
+## [0.2.6] - 2023-02-12
 ### Added
-* `.github/workflows/test-ubuntu.yml`
-* `.github/workflows/test-macos.yml`
-* `.github/workflows/test-windows.yml`
-* test status badges into `README.tpl`
+- GitHub Actions workflows: `.github/workflows/test-ubuntu.yml`, `.github/workflows/test-macos.yml`, and `.github/workflows/test-windows.yml`.
+- Test status badges in `README.tpl`.
 
 ### Changed
-* refactored `Makefile`
+- Refactor `Makefile`.
 
 ### Removed
-* `COPYING`
+- `COPYING` file.
 
 ### Fixed
-* `LICENSE-APACHE`, `LICENSE-MIT`
+- Licenses: `LICENSE-APACHE` and `LICENSE-MIT`.
 
-## [0.2.5] (2023-01-28)
+## [0.2.5] - 2023-01-28
 ### Added
-* `.github/workflows/test.yml`
-* test status badges into `README.tpl`
+- GitHub Actions workflow: `.github/workflows/test.yml`.
+- Test status badges in `README.tpl`.
 
 ### Fixed
-* Makefile: rustc version `1.66.0` to `1.66.1`
+- Makefile: update `rustc` version from `1.66.0` to `1.66.1`.
 
-## [0.2.4] (2023-01-10)
+## [0.2.4] - 2023-01-10
 ### Added
-* rust-version = "1.56.0" into Cargo.toml
-* `all-test-version` target into Makefile
-* badges into README.tpl
+- `rust-version = "1.56.0"` in `Cargo.toml`.
+- `all-test-version` target in `Makefile`.
+- Badges in `README.tpl`.
 
 ### Changed
-* reformat `CHANGELOG.md`
+- Reformat `CHANGELOG.md`.
 
-## [0.2.3] (2022-06-13)
+## [0.2.3] - 2022-06-13
 ### Changed
-* changes to edition 2021
+- Switch to edition 2021.
 
-## [0.2.2] (2021-11-14)
+## [0.2.2] - 2021-11-14
 ### Added
-* more documents
+- More documentation.
 
-## [0.2.1] (2021-07-01)
+## [0.2.1] - 2021-07-01
+### Fixed
+- License.
+
+## [0.2.0] - 2021-06-26
 ### Changed
-* fix lisence
+- Initial release on GitHub.
 
-## [0.2.0] (2021-06-26)
+## [0.1.4] - 2021-06-26
 ### Changed
-* first commit on github
+- Move repository to GitHub.
 
-## [0.1.4] (2021-06-26)
-### Changed
-* change to github
-
-## [0.1.3] (2021-06-26)
+## [0.1.3] - 2021-06-26
 ### Added
-* some documents, README.tpl and Makefile
+- Documentation, `README.tpl`, and `Makefile`.
 
-## [0.1.2] (2020-11-18)
+## [0.1.2] - 2020-11-18
 ### Added
-* README.md, COPYING, LICENSE-APACHE, LICENSE-MIT
+- `README.md`, `COPYING`, `LICENSE-APACHE`, and `LICENSE-MIT`.
 
-## [0.1.1] (2020-05-10)
+## [0.1.1] - 2020-05-10
 ### Added
-* no cfg keyword syntax
+- "No cfg keyword" syntax.
 
 ### Changed
-* change edition 2015 to 2018
+- Switch from edition 2015 to 2018.
 
 ### Fixed
-* bug: a thing deprecate from rustc 1.42.0
+- Deprecation issue from `rustc` 1.42.0.
 
-## [0.1.0] (2018-06-13)
-* first commit
+## [0.1.0] - 2018-06-13
+### Added
+- Initial commit.
 
 [unreleased]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.9..HEAD
 [0.2.9]: https://github.com/aki-akaguma/cfg-iif/compare/v0.2.8..v0.2.9
